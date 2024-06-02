@@ -14,10 +14,11 @@ public class Main {
         System.out.println("Wybierz opcję wprowadzenia daty:");
         System.out.println("1. Data z jednego dnia");
         System.out.println("2. Zakres dat");
-        String option = scanner.nextLine();
+        int option = scanner.nextInt();
+        scanner.nextLine(); // Konsumuj nową linię
 
         String date;
-        if (option.equals("1")) {
+        if (option == 1) {
             // Wprowadź datę z jednego dnia
             System.out.println("Podaj datę (YYYY-MM-DD): ");
             date = scanner.nextLine();
