@@ -1,6 +1,7 @@
 package com.przelicznikwalut;
 
 import java.util.Scanner;
+import com.przelicznikwalut.DataValidation;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,19 +18,31 @@ public class Main {
         int option = scanner.nextInt();
         scanner.nextLine(); // Konsumuj nową linię
 
-        String date;
-        if (option == 1) {
-            // Wprowadź datę z jednego dnia
-            System.out.println("Podaj datę (YYYY-MM-DD): ");
-            date = scanner.nextLine();
-        } else {
-            // Wprowadź zakres dat
-            System.out.println("Podaj początkową datę (YYYY-MM-DD): ");
-            String startDate = scanner.nextLine();
-            System.out.println("Podaj końcową datę (YYYY-MM-DD): ");
-            String endDate = scanner.nextLine();
-            date = startDate + "/" + endDate;
+        DataValidation validate = new DataValidation();
+
+        String date = "";
+        //Menu
+        switch(option) {
+            case 1:
+                // Wprowadź datę z jednego dnia
+                System.out.println("Podaj datę (YYYY-MM-DD): ");
+                date = scanner.nextLine();
+                System.out.println(validate.DateValidation(date));
+                break;
+            case 2:
+                // Wprowadź zakres dat
+                System.out.println("Podaj początkową datę (YYYY-MM-DD): ");
+                String startDate = scanner.nextLine();
+                System.out.println("Podaj końcową datę (YYYY-MM-DD): ");
+                String endDate = scanner.nextLine();
+                date = startDate + "/" + endDate;
+                break;
+            default:
+                System.out.println("Nie ma takiej opcji w menu");
+                System.exit(0);
         }
+
+
 
         // Pobierz dane z API
         NBPApiClient apiClient = new NBPApiClient();
