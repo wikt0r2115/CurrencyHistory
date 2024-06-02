@@ -52,7 +52,7 @@ public class Main {
         DataProcessor dataProcessor = new DataProcessor();
         ProcessedData processedData = dataProcessor.processData(jsonResponse);
         System.out.println("Wynik:");
-        System.out.println(processedData);
+        System.out.println(processedData + " PLN");
 
         // Zapisz dane do pliku CSV
         CsvWriter csvWriter = new CsvWriter();
