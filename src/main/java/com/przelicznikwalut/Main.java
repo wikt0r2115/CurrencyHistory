@@ -1,15 +1,13 @@
 package com.przelicznikwalut;
 
 import java.util.Scanner;
-import com.przelicznikwalut.DataValidation;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Wybór waluty
-        System.out.println("Wybierz walutę (np. USD, EUR): ");
-        String currency = scanner.nextLine();
+        MenuJava menu = new MenuJava();
+        menu.ChooseCurrency(scanner);
 
         // Wybór opcji wprowadzenia daty
         System.out.println("Wybierz opcję wprowadzenia daty:");
@@ -46,7 +44,7 @@ public class Main {
 
         // Pobierz dane z API
         NBPApiClient apiClient = new NBPApiClient();
-        String jsonResponse = apiClient.fetchData(date, currency);
+        String jsonResponse = apiClient.fetchData(date, "EUR");
 
         // Przetwórz i wyświetl dane
         DataProcessor dataProcessor = new DataProcessor();
