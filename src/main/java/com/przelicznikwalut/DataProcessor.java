@@ -2,11 +2,10 @@ package com.przelicznikwalut;
 
 public class DataProcessor {
     public ProcessedData processData(String jsonResponse) {
-        String currency = extractValue(jsonResponse, "currency");
         String code = extractValue(jsonResponse, "code");
         double rate = Double.parseDouble(extractValueFromRates(jsonResponse, "mid"));
 
-        return new ProcessedData(currency, code, rate);
+        return new ProcessedData(code, rate);
     }
 
     private String extractValue(String json, String key) {
