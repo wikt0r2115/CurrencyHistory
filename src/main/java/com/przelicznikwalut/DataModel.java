@@ -7,6 +7,7 @@ public class DataModel {
     private Date Startdate;
     private Date Enddate;
     private String Currency;
+    private Integer option;
 
     public Date getDate() {
         return Date;
@@ -34,5 +35,12 @@ public class DataModel {
     }
     public void setCurrency(String currency){
         this.Currency = currency;
+    }
+
+    public Integer getOption(){
+        return this.option;
+    }
+    public void setOption(Integer option){
+        this.option = option;
     }
 }
