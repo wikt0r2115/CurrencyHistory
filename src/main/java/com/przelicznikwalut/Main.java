@@ -12,13 +12,6 @@ public class Main {
         DataController controller = new DataController(model,menu,scanner,validate);
         controller.AppStart();
         controller.ChooseDateType();
-
-
-
-
-
-
-
         scanner.close();
     }
 }
