@@ -19,6 +19,8 @@ public class MenuJava {
         return instance;
     }
 
+    // Inne metody...
+
     public String ChooseCurrency(Scanner scanner) {
         // Wybór waluty
         System.out.println("Wybierz walutę (np. USD, EUR): ");
