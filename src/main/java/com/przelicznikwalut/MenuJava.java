@@ -99,7 +99,7 @@ public class MenuJava {
     private void saveDataToCSV(Scanner scanner, ProcessedData processedData) {
         System.out.println("Czy chcesz zapisać dane do pliku csv?(T/N)");
         Character c = scanner.nextLine().charAt(0);
-        if (c == 'T') {
+        if (c == 'T' || c =='t') {
             // Zapisz dane do pliku CSV
             CsvWriter csvWriter = new CsvWriter();
             csvWriter.writeDataToCsv(processedData, "output data" + "/data_" + System.currentTimeMillis() + ".csv");
