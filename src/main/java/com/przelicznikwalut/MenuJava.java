@@ -21,13 +21,13 @@ public class MenuJava {
 
 
     public String ChooseCurrency(Scanner scanner) {
-        // Wybór waluty
+        //Wybór kodu waluty
         System.out.println("Wybierz walutę (np. USD, EUR): ");
         return scanner.nextLine();
     }
 
     public Integer ChooseDateType(Scanner scanner) {
-        // Wybór opcji wprowadzenia daty
+        //Wybór wprowadzenia daty
         System.out.println("Wybierz opcję wprowadzenia daty:");
         System.out.println("1. Data z jednego dnia");
         System.out.println("2. Zakres dat");
@@ -39,7 +39,7 @@ public class MenuJava {
         
         switch (option) {
             case 1:
-                // Wprowadź datę z jednego dnia
+                // Wprowadź datę jednego dnia
                 System.out.println("Podaj datę (YYYY-MM-DD): ");
                 scanner.nextLine();
                 date = scanner.nextLine();
