@@ -19,7 +19,6 @@ public class MenuJava {
         return instance;
     }
 
-    // Inne metody...
 
     public String ChooseCurrency(Scanner scanner) {
         // Wybór waluty
@@ -37,7 +36,7 @@ public class MenuJava {
 
     public void Menu(Scanner scanner, int option, DataValidation validate, String currency) {
         String date = "";
-        // Menu
+        
         switch (option) {
             case 1:
                 // Wprowadź datę z jednego dnia
