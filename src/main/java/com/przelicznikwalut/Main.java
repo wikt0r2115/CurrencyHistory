@@ -1,6 +1,5 @@
 package com.przelicznikwalut;
 
-import javax.xml.crypto.Data;
 import java.util.Scanner;
 
 public class Main {
